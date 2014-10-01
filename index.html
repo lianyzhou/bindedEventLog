@@ -1,24 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<a href="
+javascript:(function(){if(window.findDomLeaks){findDomLeaks()}else{var%20n=document.createElement('script');n.setAttribute('language','JavaScript');n.setAttribute('src','http://lianyzhou.github.io/bindedEventLog/finddomleaks.js'.replace('http:',window.location.protocol));document.body.appendChild(n);}})();;">find dom events</a>
+		
+		<style>
+		p {margin:20px;}
+		img {border:1px dotted #000;padding:10px;margin:10px;}
+		</style>
+		<h1>怎么使用</h1>
 
-<a href="
-javascript:(function(){if(window.findDomLeaks){findDomLeaks()}else{var%20n=document.createElement('script');n.setAttribute('language','JavaScript');n.setAttribute('src','http://lianyzhou.github.io/logutil/finddomleaks.js'.replace('http:',window.location.protocol));document.body.appendChild(n);}})();;">find dom events</a>
-
-<style>
-p {margin:20px;}
-img {border:1px dotted #000;padding:10px;margin:10px;}
-</style>
-<h1>怎么使用</h1>
-
-<p>第一步，将页面上的链接添加到书签。</p>
-<img src="howtouse.png"/>
-<p>第二步，在ap.antfact.com或者是开发环境内运行书签。</p>
-<img src="howtouse1.png"/>
-<p>第三步，在控制台运行一下指定的几行脚本（PS：getEventListeners默认在文件中无法访问，是Chrome Dev Tools Command Line Api提供的函数，默认不在window上。手动运行后，该函数会添加到window上）。</p>
-<img src="howtouse2.png"/>
-<img src="howtouse3.png"/>
-<p>第四步，再次运行书签，就能看页面内绑定的事件了，大于1个的绑定事件会打印到控制台上。</p>
-<img src="howtouse4.png"/>
-<p>第五步，通过不断的运行这个书签，就能发现有问题的事件绑定，通过在函数上右键选择 Show function definition 可以定位到绑定的函数。</p>
-<img src="howtouse5.png"/>
-<p>在页面放置了一段时间后再次运行，发现有重复绑定的事件，就可以针对具体的情况进行优化了。图中的超过1000个绑定的dom就是有问题的</p>
-<img src="howtouse6.png"/>
-
+		<p>第一步，将页面上的链接添加到书签。</p>
+		<img src="howtouse.png"/>
+		<p>第二步，在ap.antfact.com或者是开发环境内运行书签。</p>
+		<img src="howtouse1.png"/>
+		<p>第三步，在控制台运行一下指定的几行脚本（PS：getEventListeners默认在文件中无法访问，是Chrome Dev Tools Command Line Api提供的函数，默认不在window上。手动运行后，该函数会添加到window上）。</p>
+		<img src="howtouse2.png"/>
+		<img src="howtouse3.png"/>
+		<p>第四步，再次运行书签，就能看页面内绑定的事件了，大于1个的绑定事件会打印到控制台上。</p>
+		<img src="howtouse4.png"/>
+		<p>第五步，通过不断的运行这个书签，就能发现有问题的事件绑定，通过在函数上右键选择 Show function definition 可以定位到绑定的函数。</p>
+		<img src="howtouse5.png"/>
+		<p>在页面放置了一段时间后再次运行，发现有重复绑定的事件，就可以针对具体的情况进行优化了。图中的超过1000个绑定的dom就是有问题的</p>
+		<img src="howtouse6.png"/>
+	</body>
+</html>
